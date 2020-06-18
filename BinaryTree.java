@@ -48,9 +48,9 @@ class BinaryTreeNode
 			return;
 		}
 
-		nodes.add(inOrder(node.data));
-		nodes.add(inOrder(node.left));
-		nodes.add(inOrder(node.right));
+		nodes.add(preOrder(node.data));
+		nodes.add(preOrder(node.left));
+		nodes.add(preOrder(node.right));
 
 		for(int i = 0; i < nodes.size(); i++)
 		{
@@ -59,7 +59,7 @@ class BinaryTreeNode
 	}
 
 //PostOrder Traversal : left-right-node
-	public void postOrder(Node node)
+	public void postOrderpostOrder(Node node)
 	{
 		List<Integer> nodes = new ArrayList<>();
 		if(node == null)
@@ -67,9 +67,9 @@ class BinaryTreeNode
 			return;
 		}
 
-		nodes.add(inOrder(node.left));
-		nodes.add(inOrder(node.right));
-		nodes.add(inOrder(node.data));
+		nodes.add(postOrder(node.left));
+		nodes.add(postOrder(node.right));
+		nodes.add(postOrder(node.data));
 
 		for(int i = 0; i < nodes.size(); i++)
 		{
